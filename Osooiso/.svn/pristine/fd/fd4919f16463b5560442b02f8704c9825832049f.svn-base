@@ -1,0 +1,58 @@
+		
+		
+		// 년일월 날짜 구하는 쿼리.
+		
+		SimpleDateFormat format1 = new SimpleDateFormat ( "yyyyMMdd");
+		Calendar time = Calendar.getInstance();
+		String format_time1 = format1.format(time.getTime());
+		System.out.println(format_time1);
+		
+		// 시퀸스 번호를 order by 하는 방법.
+		
+		select lpad(MBER_NO, 4, '0') a from mber order by a; // 좌측에 0을 몰아넣은 다음 엘류어스(별명)을 주어 엘류어스로 정렬.
+		
+		
+		
+		// 시퀀스번호 생성
+DROP SEQUENCE BBSCTT_NO_SEQ ;
+DROP SEQUENCE MBER_NO_SEQ ;
+
+CREATE SEQUENCE BBSCTT_NO_SEQ
+START WITH 1
+INCREMENT BY 1;
+
+CREATE SEQUENCE MBER_NO_SEQ
+START WITH 1
+INCREMENT BY 1;
+		
+		
+	1.프로그램실행
+	2. + 버튼으로 로그인화면 가기
+	3. 홈버튼 누르면 홈으로 다시 가짐
+	4.아무숫자 누르고 로그인 함 > 안되는
+	거 보여줌
+	5.회원가입 하면서 일부러 길게 쳐서 중복이 있거나, 자리수 넘는거
+	알려줌
+	5.1 = 아이디비밀번호 찾기
+	5.2 = 새비밀번호 재설정할때 일부러 다르게 침
+
+	6. 회원가입 한 아이디로 로그인함
+	7. 프로필 수정으로 들어가서 비밀번호,전화번호,닉네임
+	수정하는 거 보여줌
+	8.로그아웃 하고 다시 바뀐걸로 로그인
+	9.종이비행기 
+	
+	
+		// 재귀관계의 레벨 구조를 통한 댓글,대댓글 기능
+		SELECT LEVEL
+, LPAD(' ', 4*(LEVEL-1)) || bbsctt_sj bbsctt_sj
+, B.BBSCTT_NO
+, B.UP_BBSCTT_NO
+, B.MBER_NO
+, B.BBSCTT_DATE
+, M.NCNM
+FROM BBSCTT B
+join MBER M  on M.MBER_NO = B.MBER_NO
+START WITH UP_BBSCTT_NO = '7'
+AND B.INDICT_AT = 'y'
+CONNECT BY PRIOR B.BBSCTT_NO = B.UP_BBSCTT_NO;

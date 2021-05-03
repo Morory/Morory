@@ -1,0 +1,29 @@
+insert into mber
+VALUES('1', 'a', 'a', 'a', 'a', 'a', 'a');
+insert into bbsctt
+VALUES('1', null, '1', '1', '1', sysdate, 'y', '#맛집', './image/btnWrite.jpg');
+insert into bbsctt
+VALUES('2', null, '1', '1', '1', sysdate, 'y', '#맛집', './image/profile.jpg');
+insert into bbsctt
+VALUES('3', null, '1', '1', '1', sysdate, 'y', '#맛집', './image/btnNext.png');
+insert into bbsctt
+VALUES('4', null, '1', '1', '1', sysdate, 'y', '#맛집', './image/btnPrevious.png');
+delete from bbsctt;
+
+select * from bbsctt
+where up_bbsctt_nm is null
+and indict_at = 'y';
+select * from bbsctt
+where up_bbsctt_nm is not null
+and indict_at = 'y';
+
+DELETE from bbsctt;
+
+
+SELECT COUNT(R.BBSCTT_NO)
+     , R.BBSCTT_NO
+FROM   RECOMEND R
+JOIN   BBSCTT   B
+ON     R.BBSCTT_NO = B.BBSCTT_NO
+GROUP  BY R.BBSCTT_NO
+ORDER  BY COUNT(R.BBSCTT_NO);
