@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+body {
+	font-size: 16px;
+}
+
+table { /*table 엘리먼트의 테두리 설정*/
+	border-collapse: collapse; /*"collapsiong border model" 설정*/
+}
+
+tr { /*tr 엘리먼트 테두리설정*/
+	border: 5px dashed blue; /*테두리 두께 5px, 스타일 dashed, 테두리 색 파랑*/
+}
+
+td { /*td 엘리먼트의 테두리설정*/
+	border: 2px solid black; /*테두리 두께 2px, 스타일 실선, 테두리 색 검정*/
+	padding: lem; /*테두리와 글 내용간의 간격 1em*/
+	vertical-align: middle; /*수직 가운데 맞춤*/
+	text-aling: center; /*수평 가운데 맞춤*/
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>FORM</title>
+</head>
+<body>
+	<h2>HTML FORM 테스트</h2>
+
+	<!--
+	<input type="text" name="" value="" style="ime-mode:auto;">
+	<input type="text" name="" value="" style="ime-mode:active;">
+	<input type="text" name="" value="" style="ime-mode:inactive;">
+	<input type="text" name="" value="" style="ime-mode:disabled;">
+	ime-mode
+	auto : 한/영 변환 자유로움
+	active : 한글 기본/ 한/영 변환 자유로움
+	inactive : 영문기본 한/영 변환 자유로움
+	disabled : 영문기본, 한/영변환 안됨. 영문/숫자만 입력가능
+	 -->
+
+	<form method=POST action=/Myjsp/SvlEchoData>
+
+		<table border=1>
+			<tr>
+				<td>
+					<table>
+						<tr>
+							<td>ID</td>
+							<td><input type=text name=id style="ime-mode: inactive;"><br></td>
+						</tr>
+						<tr>
+							<td>이름</td>
+							<td><input type=text name=name style="ime-mode: active;"><br></td>
+						</tr>
+						<tr>
+							<td>암호</td>
+							<td><input type=password name=passwd
+								style="ime-mode: disabled;"><br></td>
+						</tr>
+						<tr>
+							<td><input type=button value="버튼"></td>
+						</tr>
+					</table>
+				</td>
+				<td>성별<br> <input type=radio name=sex value=male checked>남자
+					<input type=radio name=sex value=female>여자<br> <br>
+					사용중인 편집기는?<br> <input type=checkbox name="eclipse"
+					value="eclipse">Eclipse<br> <input type=checkbox
+					name="jbuilder" value="jbuilder">Jbuilder<br>
+				</td>
+			</tr>
+
+			<tr>
+				<td><input type=hidden name="state" value="ready"> 사용중인
+					운영 체제는?<br> <select name=os size=3 multiple>
+						<option value="win32">윈도우
+						<option value="linux">리눅스
+						<option value="solaris">솔라리스
+						<option value="misc">기타
+				</select><br> <br> 사용중인 컴퓨터 하드웨어는?<br> <select name=hw>
+						<option value="i7">i7
+						<option value="i5" selected>i5
+						<option value="pentium">펜티엄
+						<option value="misc">기타
+				</select></td>
+				<td><br> 자기소개<br> <textarea name="intro"
+						rows=10　cols=40 style="ime-mode: active;"></textarea></td>
+			</tr>
+			<tr>
+				<td colspan=2 align="center"><input type=submit value="전 송">
+					<input type=reset value="취 소"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

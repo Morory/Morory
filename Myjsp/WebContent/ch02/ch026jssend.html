@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>입력창</title>
+</head>
+<script>
+	function send(form) {
+		var value;
+		
+		value = prompt("입력하신 내용이 맞나요", form.keyword.value);
+		if (value == null)
+			return false;
+		else {
+			form.keyword.value = value;
+			return true;
+		}
+	}
+</script>
+<body>
+	<form method=post action=/Myjsp/SvlEchoData
+		onSubmit='return send(this)'>
+		<!--  
+		키워드 : <input type=text name=keyword> 
+		-->
+		
+		키워드 : <input type=text name=keyword value="abcd"> 
+		<input type=submit value="전송">
+	</form>
+</body>
+</html>

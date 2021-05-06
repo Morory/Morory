@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ID 체크</title>
+<script src=ch0260jscheck.js></script>
+<script>
+	function check(form) {
+		if (!isID(form.id)) {
+			alert('ID가 적절하지 않습니다');
+			return false;
+		}
+		if (isNull(form.pass, '암호를 입력해주세요')) {
+			return false;
+		}
+		retrun
+		true;
+	}
+</script>
+</head>
+<body>
+	<h3>ID 체크</h3>
+
+	사용자 ID와 암호를 입력해주세요.
+	<p>
+	<form method=get action=/Myjsp/SvlEchoData onSubmit='return check(this)'>
+		아이디 : <input type=text name=id><br> 
+		암  호  : <input type=password name=pass><br> 
+			   <input type=submit value="전송">
+	</form>
+</body>
+</html>

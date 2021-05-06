@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+body {
+	background-color: #000000;
+}
+
+#code {
+	ime-mode:inactive;
+}
+
+.container {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.item {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+div.item {
+	margin-top: 20px;
+}
+
+.buttons {
+	width: 200px;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+tr#title td {
+	text-align: center;
+	font-weight: bold;
+}
+
+span {
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 20px;
+}

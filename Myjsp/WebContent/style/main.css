@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+#gridnavi {
+	display: grid;
+	grid-template: 25px / 1fr 2fr 4fr 3.5fr 1fr;
+}
+
+#gridnavi a:first-child {
+	grid-column: 1 / 2;
+}
+
+#gridnavi input {
+	grid-column: 3 / 4;
+}
+
+#gridnavi a:last-child {
+	grid-column: 5 / 6;
+}

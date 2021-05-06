@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+body {
+	background-image: url("picture2.png");
+	background-repeat: no-repeat; /*배경이미지 반복안함*/
+	/*background-repeat: repeat-x;*/ /*배경이미지 수평반복*/
+	/*background-attachment: fixed;*/ /*배경이미지 위치고정*/
+	background-attachment: scroll; /*배경이미지 스크롤*/
+}

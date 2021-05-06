@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+div#rnd1{
+	background-color: #D7ECFF;
+	line-height : 20px;
+	width : 500px;
+	padding : 15px;
+	-webkit-border-radius: 10px; /*모서리 둥글게*/
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	-ms-border-radius: 10px;
+}
+
+div#rnd2{
+	background-color: #D7ECFF;
+	line-height: 20px;
+	width: 500px;
+	padding: 15px;
+	-webkit-border_radius: 20px;
+	-moz-border-radius: 20px;
+	-o-border-radius: 20px;
+	-ms-border-radius: 20px;
+}

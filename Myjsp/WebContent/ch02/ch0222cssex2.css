@@ -1,0 +1,18 @@
+@charset "UTF-8";
+body {
+	background: #FFF0B5; /*배경색 지정*/
+	font-size: 16px; /*글자 크기 지정*/
+}
+
+p#id1 {
+	text-indent: 2em; /*'2em'정도 문단 첫줄 들여쓰기*/
+	text-align: justify; /*양쪽 맞춤*/
+	text-decoration: underline; /*문단에 밑줄 지정*/
+	font-weight: bold; /*폰트 두께를 bold로 지정*/
+}
+
+p#id2 {
+	text-decoration: line-through; /*문단에 취소선 지정*/
+	color: blue; /*글자색은 파랑*/
+	font-style: italic; /*폰트스트일을 italic으로 지정*/
+}
