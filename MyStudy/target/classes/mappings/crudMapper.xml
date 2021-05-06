@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cstDao">
+
+	<select id="select" resultType="cstDto">
+		SELECT * FROM CUSTOMER WHERE CODE = #{code}
+	</select>
+
+	<select id="selectAll" resultType="cstDto">
+		SELECT * FROM CUSTOMER WHERE CODE >= #{code} ORDER BY CODE
+	</select>
+
+	<insert id="insert">
+		INSERT INTO CUSTOMER (CODE, NAME, EMAIL, TEL, WEIGHT)
+		VALUES(#{code}, #{name}, #{email}, #{tel}, #{weight})
+	</insert>
+
+	<update id="update">
+		UPDATE CUSTOMER SET TEL = #{tel} WHERE CODE = #{code}
+	</update>
+
+	<delete id="delete">
+		DELETE FROM CUSTOMER WHERE CODE = #{code}
+	</delete>
+
+</mapper>
